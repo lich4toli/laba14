@@ -1,0 +1,27 @@
+﻿<Window x:Class="UrsheevGlazki.PriorityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UrsheevGlazki"
+        mc:Ignorable="d"
+        Title="PriorityWindow" Height="250" Width="500">
+    <Grid>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Изменить приоритет выбранных агентов на:" Margin="5" Grid.Row="0" Grid.Column="0" FontSize="11"/>
+                <TextBox Name="PriorityTextBox" Width="175" Margin="5" Grid.Row="0" Grid.Column="1" TextChanged="PriorityTextBox_TextChanged" PreviewTextInput="PriorityTextBox_PreviewTextInput"/>
+                <Button Name="EditButton" Content="Изменить" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Click="EditButton_Click"/>
+                <Button Name="CancelButton" Content="Отмена" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" Click="CancelButton_Click"/>
+            </Grid>
+        </WrapPanel>
+    </Grid>
+</Window>
